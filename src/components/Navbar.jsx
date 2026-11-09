@@ -12,7 +12,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 28);
 
-      const sectionIds = ['platform', 'intelligence', 'use-cases', 'about', 'pilot', 'faq'];
+      const sectionIds = ['platform', 'capabilities', 'use-cases', 'about', 'team', 'pilot', 'faq'];
       const scrollPosition = window.scrollY + 180;
 
       for (const id of sectionIds) {
@@ -123,59 +123,88 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="inline-flex items-center justify-center p-2.5 rounded-lg text-[#F4F7FA] bg-[#1D3557]/80 border border-white/10 hover:bg-[#1D3557] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#55D3BD]"
+              onClick={() => setMobileMenuOpen(true)}
+              className="inline-flex items-center justify-center p-2.5 rounded-lg text-[#F4F7FA] bg-[#1D3557]/80 border border-white/10 hover:bg-[#1D3557] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#55D3BD] cursor-pointer"
               aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-navigation-menu"
-              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-controls="mobile-sidebar-navigation"
+              aria-label="Open mobile navigation sidebar"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              <Menu className="w-5 h-5" />
             </button>
           </div>
         </nav>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Slide-over Sidebar Drawer */}
       {mobileMenuOpen && (
         <div
-          id="mobile-navigation-menu"
-          className="md:hidden bg-[#101C2C] border-b border-white/10 px-4 pt-4 pb-6 shadow-2xl"
+          id="mobile-sidebar-navigation"
+          className="fixed inset-0 z-50 md:hidden"
+          role="dialog"
+          aria-modal="true"
         >
-          <div className="flex flex-col space-y-1.5">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.href;
-              return (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={`flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                    isActive
-                      ? 'bg-[#1D3557] text-[#55D3BD]'
-                      : 'text-[#F4F7FA]/90 hover:bg-[#1D3557]/50 hover:text-white'
-                  }`}
-                >
-                  <span>{link.label}</span>
-                  <span className="font-mono text-xs text-[#7B8794]">{link.href}</span>
-                </a>
-              );
-            })}
-          </div>
+          {/* Backdrop overlay */}
+          <div
+            className="fixed inset-0 bg-black/75 backdrop-blur-sm transition-opacity"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
 
-          <div className="mt-5 pt-5 border-t border-white/10 flex flex-col gap-3">
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1D3557]/40 border border-white/5 text-xs font-mono text-[#7B8794]">
-              <Radio className="w-3.5 h-3.5 text-[#55D3BD]" />
-              <span>Initial Focus: Flood-Risk Intelligence (Nigeria)</span>
+          {/* Slide-in Aside Drawer Panel */}
+          <aside className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-[#101C2C] border-l border-white/15 p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+            <div>
+              {/* Header with Brand Logo & Close Button */}
+              <div className="flex items-center justify-between pb-5 mb-6 border-b border-white/10">
+                <TerraPulseLogo markClassName="w-8 h-8" textClassName="text-base" />
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-lg bg-[#1D3557]/80 border border-white/10 text-[#F4F7FA] hover:bg-[#1D3557] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#55D3BD] cursor-pointer"
+                  aria-label="Close navigation sidebar"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex flex-col space-y-2">
+                {navLinks.map((link) => {
+                  const isActive = activeSection === link.href;
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                        isActive
+                          ? 'bg-[#1D3557] text-[#55D3BD] border border-[#55D3BD]/30'
+                          : 'text-[#F4F7FA]/90 hover:bg-[#1D3557]/50 hover:text-white'
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <span className="font-mono text-xs text-[#7B8794]">{link.href}</span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
-            <a
-              href="#pilot"
-              onClick={(e) => handleNavClick(e, '#pilot')}
-              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#3978E8] hover:bg-[#2d66cc] text-white font-semibold text-sm shadow-lg transition-colors"
-            >
-              <span>Request Early Access</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
+
+            {/* Sidebar Bottom CTA */}
+            <div className="pt-6 border-t border-white/10 flex flex-col gap-3.5">
+              <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1D3557]/40 border border-white/5 text-xs font-mono text-[#7B8794]">
+                <Radio className="w-3.5 h-3.5 text-[#55D3BD] shrink-0" />
+                <span>Nigeria Flood Risk Focus</span>
+              </div>
+              <a
+                href="#pilot"
+                onClick={(e) => handleNavClick(e, '#pilot')}
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#3978E8] hover:bg-[#2d66cc] text-white font-semibold text-sm shadow-lg transition-colors cursor-pointer"
+              >
+                <span>Request Early Access</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+          </aside>
         </div>
       )}
     </header>

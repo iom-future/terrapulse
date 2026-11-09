@@ -271,6 +271,7 @@ export default function Features() {
 
   return (
     <section
+      id="capabilities"
       ref={sectionRef}
       className="relative py-24 lg:py-32 bg-[#101C2C] text-[#F4F7FA] border-b border-white/10"
       aria-labelledby="capabilities-heading"

@@ -3,10 +3,11 @@ import Hero from './components/Hero';
 import Problem from './components/Problem';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
-import IntelligenceLoop from './components/IntelligenceLoop';
 import Audience from './components/Audience';
 import FutureVision from './components/FutureVision';
 import Trust from './components/Trust';
+import Team from './components/Team';
+import Testimonials from './components/Testimonials';
 import PilotForm from './components/PilotForm';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
@@ -30,10 +31,11 @@ export default function App() {
         <Problem />
         <HowItWorks />
         <Features />
-        <IntelligenceLoop />
         <Audience />
         <FutureVision />
         <Trust />
+        <Team />
+        <Testimonials />
         <PilotForm />
         <FAQ />
         <FinalCTA />

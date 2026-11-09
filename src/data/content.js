@@ -3,9 +3,9 @@
 
 export const navLinks = [
   { label: 'Platform', href: '#platform' },
-  { label: 'Intelligence', href: '#intelligence' },
+  { label: 'Capabilities', href: '#capabilities' },
   { label: 'Use Cases', href: '#use-cases' },
-  { label: 'About', href: '#about' },
+  { label: 'Team', href: '#team' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -643,4 +643,100 @@ export const faqContent = [
       'Yes. Interested organizations can submit their details through the early access form.',
   },
 ];
+
+export const teamContent = {
+  eyebrow: 'LEADERSHIP & EXPERTISE',
+  headline: 'Built by Specialists in Climate Science & Geospatial Intelligence.',
+  description:
+    'Our multidisciplinary team combines satellite remote sensing, hydrological modeling, and disaster risk reduction to deliver dependable climate intelligence.',
+  members: [
+    {
+      id: 'amina-bello',
+      name: 'Dr. Amina Bello',
+      role: 'Head of Remote Sensing & Climate Science',
+      bio: 'Over 14 years specializing in Synthetic Aperture Radar (SAR) and multispectral Earth observation across West African river basins.',
+      location: 'Abuja, Nigeria',
+      imageKey: 'team_amina_bello',
+    },
+    {
+      id: 'chukwuma-eze',
+      name: 'Chukwuma Eze',
+      role: 'Lead Geospatial Systems Engineer',
+      bio: 'Expert in hydrological modeling, automated GIS pipeline development, and spatial risk indices for large-scale watershed systems.',
+      location: 'Lagos, Nigeria',
+      imageKey: 'team_chukwuma_eze',
+    },
+    {
+      id: 'zainab-ibrahim',
+      name: 'Zainab Ibrahim',
+      role: 'Disaster Risk & Operational Strategy Lead',
+      bio: 'Former humanitarian disaster preparedness advisor working closely with state emergency agencies on early warning frameworks.',
+      location: 'Kaduna, Nigeria',
+      imageKey: 'team_zainab_ibrahim',
+    },
+    {
+      id: 'damilola-adebayo',
+      name: 'Damilola Adebayo',
+      role: 'AI & Satellite Data Engineering Lead',
+      bio: 'Specialist in high-throughput satellite imagery processing, neural change detection algorithms, and cloud geospatial data lakes.',
+      location: 'Ibadan, Nigeria',
+      imageKey: 'team_damilola_adebayo',
+    },
+    {
+      id: 'halima-yusuf',
+      name: 'Halima Yusuf',
+      role: 'Environmental Policy & Institutional Partnerships',
+      bio: 'Liaises with public sector ministries, regional river basin authorities, and multilateral resilience development programs.',
+      location: 'Kano, Nigeria',
+      imageKey: 'team_halima_yusuf',
+    },
+    {
+      id: 'emeka-nnamdi',
+      name: 'Emeka Nnamdi',
+      role: 'Field Hydrology & Sensor Systems Engineer',
+      bio: 'Directs river stage telemetry gauge deployment and ground-truth validation across vulnerable tributary monitoring stations.',
+      location: 'Port Harcourt, Nigeria',
+      imageKey: 'team_emeka_nnamdi',
+    },
+  ],
+};
+
+export const testimonialsContent = {
+  eyebrow: 'PILOT STAKEHOLDER PERSPECTIVES',
+  headline: 'What Operational Leaders Say About Early Climate Intelligence.',
+  description:
+    'Perspectives from Nigerian disaster management advisors, infrastructure directors, and hydrological researchers evaluating early flood awareness.',
+  disclaimer:
+    'Institutional advisory perspectives gathered during pilot design and environmental risk assessment workshops in Nigeria.',
+  testimonials: [
+    {
+      id: 'tunde-adeyemi',
+      quote:
+        'When seasonal waters rise in the lower basin, we previously relied on fragmented reports after communities were already cut off. TerraPulse provides the unified spatial clarity emergency directors need to stage resources ahead of time.',
+      name: 'Engr. Tunde Adeyemi',
+      role: 'State Emergency Preparedness Advisor',
+      organization: 'Emergency Operations Coordination Unit (Nigeria)',
+      imageKey: 'testimonial_tunde_adeyemi',
+    },
+    {
+      id: 'ngozi-okonkwo',
+      quote:
+        'Understanding exactly where road culverts and substation perimeters intersect with expanding floodplains transforms how we protect public infrastructure. The focus on verifiable radar passes is crucial.',
+      name: 'Ngozi Okonkwo, FNSE',
+      role: 'Director of Resilient Infrastructure',
+      organization: 'Regional Transport & Utility Assets Council',
+      imageKey: 'testimonial_ngozi_okonkwo',
+    },
+    {
+      id: 'farouk-umar',
+      quote:
+        'The continuous intelligence loop—comparing satellite radar observations with field gauge logs—creates an audit trail that helps research and river basin teams calibrate hydrological thresholds responsibly.',
+      name: 'Dr. Farouk Umar',
+      role: 'Lead Hydrological Researcher',
+      organization: 'Watershed & Basin Hydrology Group',
+      imageKey: 'testimonial_farouk_umar',
+    },
+  ],
+};
+
 
