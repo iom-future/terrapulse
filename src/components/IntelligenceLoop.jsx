@@ -183,18 +183,18 @@ export default function IntelligenceLoop() {
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-[#101C2C] text-[#55D3BD] border border-white/10">
-                        {node.step} // {node.action.toUpperCase()}
-                      </span>
                       <div
-                        className={`w-9 h-9 rounded-lg flex items-center justify-center ${
+                        className={`w-11 h-11 rounded-xl flex items-center justify-center ${
                           isSelected
                             ? 'bg-[#55D3BD] text-[#101C2C]'
-                            : 'bg-[#101C2C] text-[#3978E8] border border-white/10'
+                            : 'bg-[#0a121e] text-[#3978E8] border border-white/10'
                         }`}
                       >
-                        <Icon className="w-4 h-4" />
+                        <Icon className="w-5 h-5" />
                       </div>
+                      <span className="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-[#101C2C] text-[#55D3BD] border border-white/10 uppercase">
+                        {node.action}
+                      </span>
                     </div>
 
                     <h3 className="font-heading text-lg font-bold text-[#F4F7FA] mb-2">

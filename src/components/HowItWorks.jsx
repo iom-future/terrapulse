@@ -15,11 +15,16 @@ import {
   Radio,
   ArrowUpRight,
   FileText,
+  Database,
+  Cpu,
+  Compass,
 } from 'lucide-react';
 import sarFloodImg from '../assets/images/sar-flood-observation.jpg';
 import { howItWorksContent } from '../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const stepIcons = [Database, Cpu, Compass, ClipboardCheck];
 
 const tabIcons = {
   'environmental-map': Map,
@@ -94,44 +99,42 @@ export default function HowItWorks() {
 
         {/* Four-Step Workflow Grid */}
         <div className="hiw-steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {howItWorksContent.steps.map((step, idx) => (
-            <div
-              key={step.number}
-              className="hiw-step-card relative rounded-2xl bg-[#1D3557]/45 border border-white/10 hover:border-[#55D3BD]/40 p-6 flex flex-col justify-between transition-all duration-300"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-mono text-sm font-bold px-3 py-1 rounded-md bg-[#3978E8]/20 text-[#55D3BD] border border-[#55D3BD]/30">
-                    {step.number}
-                  </span>
-                  {idx < 3 && (
-                    <span className="hidden lg:inline-block font-mono text-xs text-[#7B8794]">
-                      STEP {step.number} →
-                    </span>
-                  )}
+          {howItWorksContent.steps.map((step, idx) => {
+            const StepIcon = stepIcons[idx] || Database;
+            return (
+              <div
+                key={step.number}
+                className="hiw-step-card relative rounded-2xl bg-[#1D3557]/45 border border-white/10 hover:border-[#55D3BD]/40 p-6 flex flex-col justify-between transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-[#101C2C] border border-[#55D3BD]/30 flex items-center justify-center text-[#55D3BD]">
+                      <StepIcon className="w-5 h-5" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-heading text-xl font-bold text-[#F4F7FA] mb-3">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-sm text-[#F4F7FA]/75 leading-relaxed mb-6">
+                    {step.description}
+                  </p>
                 </div>
 
-                <h3 className="font-heading text-xl font-bold text-[#F4F7FA] mb-3">
-                  {step.number}. {step.title}
-                </h3>
-
-                <p className="text-sm text-[#F4F7FA]/75 leading-relaxed mb-6">
-                  {step.description}
-                </p>
+                <div className="pt-4 border-t border-white/10 flex flex-wrap gap-1.5">
+                  {step.inputs.map((chip) => (
+                    <span
+                      key={chip}
+                      className="px-2 py-0.5 rounded bg-[#101C2C]/80 border border-white/10 font-mono text-[10px] text-[#7B8794]"
+                    >
+                      {chip}
+                    </span>
+                  ))}
+                </div>
               </div>
-
-              <div className="pt-4 border-t border-white/10 flex flex-wrap gap-1.5">
-                {step.inputs.map((chip) => (
-                  <span
-                    key={chip}
-                    className="px-2 py-0.5 rounded bg-[#101C2C]/80 border border-white/10 font-mono text-[10px] text-[#7B8794]"
-                  >
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Interactive Product Demonstration */}

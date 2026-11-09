@@ -5,10 +5,22 @@ import {
   EyeOff,
   Compass,
   Info,
-  Check,
+  MapPin,
+  Building,
+  CloudRain,
+  Activity,
+  AlertTriangle,
 } from 'lucide-react';
 import regionalTopoImg from '../assets/images/regional-topography.jpg';
 import { futureVisionContent } from '../data/content';
+
+const layerIcons = {
+  '01': MapPin,
+  '02': Building,
+  '03': CloudRain,
+  '04': Activity,
+  '05': AlertTriangle,
+};
 
 export default function FutureVision() {
   const sectionRef = useRef(null);
@@ -87,6 +99,7 @@ export default function FutureVision() {
             {futureVisionContent.layers.map((layer) => {
               const isEnabled = enabledLayers.includes(layer.id);
               const isFocused = focusedLayerId === layer.id;
+              const LayerIcon = layerIcons[layer.id] || Layers;
               return (
                 <div
                   key={layer.id}
@@ -110,19 +123,13 @@ export default function FutureVision() {
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-start gap-3">
-                      <span
-                        className={`mt-0.5 w-5 h-5 rounded flex items-center justify-center border text-xs shrink-0 ${
-                          isEnabled
-                            ? 'bg-[#55D3BD] border-[#55D3BD] text-[#101C2C]'
-                            : 'bg-[#101C2C] border-white/20 text-transparent'
-                        }`}
-                      >
-                        <Check className="w-3.5 h-3.5 stroke-[3]" />
-                      </span>
+                      <div className="w-9 h-9 rounded-lg bg-[#101C2C] border border-white/15 flex items-center justify-center text-[#55D3BD] shrink-0 mt-0.5">
+                        <LayerIcon className="w-4 h-4" />
+                      </div>
                       <div>
                         <div className="flex flex-wrap items-center gap-2 mb-1">
                           <h3 className="font-heading font-bold text-base text-[#F4F7FA]">
-                            {layer.id}. {layer.title}
+                            {layer.title}
                           </h3>
                           <span
                             className={`font-mono text-[10px] px-2 py-0.5 rounded ${

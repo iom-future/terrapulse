@@ -87,7 +87,7 @@ export default function Trust() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Four Responsible Intelligence Principles */}
           <div className="lg:col-span-6 trust-principles-grid grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {trustContent.principles.map((item, idx) => {
+            {trustContent.principles.map((item) => {
               const Icon = principleIcons[item.icon] || ShieldCheck;
               return (
                 <article
@@ -96,10 +96,7 @@ export default function Trust() {
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <span className="font-mono text-xs text-[#55D3BD]">
-                        PRINCIPLE 0{idx + 1}
-                      </span>
-                      <div className="w-10 h-10 rounded-xl bg-[#1D3557]/70 border border-white/10 flex items-center justify-center text-[#55D3BD]">
+                      <div className="w-11 h-11 rounded-xl bg-[#1D3557]/70 border border-white/10 flex items-center justify-center text-[#55D3BD]">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>

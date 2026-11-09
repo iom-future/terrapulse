@@ -307,19 +307,14 @@ export default function Features() {
                 className="feature-card group rounded-2xl bg-[#1D3557]/35 hover:bg-[#1D3557]/55 border border-white/10 hover:border-[#3978E8]/50 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-[0_12px_35px_rgba(0,0,0,0.25)]"
               >
                 <div>
-                  {/* Top Feature Badge & Icon */}
+                  {/* Top Icon & Layer Tag (No "Feature 01") */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="flex items-center gap-2.5">
-                      <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-[#101C2C] text-[#55D3BD] border border-white/10">
-                        Feature {feat.id}
-                      </span>
-                      <span className="font-mono text-[10px] text-[#7B8794]">
-                        {feat.layerBadge}
-                      </span>
+                    <div className="w-11 h-11 rounded-xl bg-[#101C2C] border border-white/15 flex items-center justify-center text-[#55D3BD] group-hover:bg-[#3978E8] group-hover:text-white transition-colors">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <div className="w-9 h-9 rounded-lg bg-[#101C2C] border border-white/10 flex items-center justify-center text-[#55D3BD] group-hover:bg-[#3978E8] group-hover:text-white transition-colors">
-                      <Icon className="w-4 h-4" />
-                    </div>
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded bg-[#101C2C] border border-white/10 text-[#7B8794]">
+                      {feat.layerBadge}
+                    </span>
                   </div>
 
                   {/* Feature Title & Subtitle */}

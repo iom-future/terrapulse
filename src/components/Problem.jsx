@@ -96,19 +96,16 @@ export default function Problem() {
                 className="problem-card group relative rounded-2xl bg-white p-7 border border-[#101C2C]/10 shadow-[0_8px_30px_rgba(16,28,44,0.05)] hover:shadow-[0_16px_40px_rgba(16,28,44,0.1)] hover:border-[#3978E8]/40 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  {/* Top Number & Icon Row */}
+                  {/* Top Icon Row (No numbers) */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-[#101C2C] text-[#55D3BD] tracking-wider">
-                      {card.number}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-[#F4F7FA] border border-[#101C2C]/10 flex items-center justify-center text-[#1D3557] group-hover:bg-[#3978E8] group-hover:text-white transition-colors duration-300">
-                      <IconComponent className="w-5 h-5" />
+                    <div className="w-12 h-12 rounded-xl bg-[#101C2C] border border-[#101C2C]/10 flex items-center justify-center text-[#55D3BD] group-hover:bg-[#3978E8] group-hover:text-white transition-colors duration-300">
+                      <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
 
-                  {/* Card Title */}
+                  {/* Card Title (No numbering prefix) */}
                   <h3 className="font-heading text-xl font-bold text-[#101C2C] mb-3 leading-snug">
-                    {card.number}. {card.title}
+                    {card.title}
                   </h3>
 
                   {/* Card Description */}
