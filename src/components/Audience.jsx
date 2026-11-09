@@ -58,7 +58,7 @@ export default function Audience() {
     <section
       id="use-cases"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] bg-geo-grid-light border-b border-[#101C2C]/10"
+      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] border-b border-[#101C2C]/10"
       aria-labelledby="audience-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,13 +73,13 @@ export default function Audience() {
 
           <h2
             id="audience-heading"
-            className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#101C2C] leading-[1.15] mb-5"
+            className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101C2C] leading-[1.12] mb-3 sm:mb-5"
           >
             {audienceContent.headline}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#1D3557]/85 leading-relaxed">
-            TerraPulse provides actionable environmental intelligence for organizations operating on the front lines of climate resilience, infrastructure stewardship and emergency preparedness.
+          <p className="text-sm sm:text-base lg:text-lg text-[#1D3557]/85 leading-relaxed">
+            Actionable climate intelligence for organizations protecting vulnerable communities, infrastructure, and regional resilience.
           </p>
         </div>
 
@@ -119,8 +119,6 @@ export default function Audience() {
 
         {/* Strategic Product Direction: Initial Market Focus (Nigeria & Pilot Evaluation Framework) */}
         <div className="rounded-2xl bg-[#101C2C] text-[#F4F7FA] p-7 sm:p-10 lg:p-12 border border-[#1D3557] shadow-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-geo-grid opacity-35 pointer-events-none" />
-
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Left Strategic Focus Description */}
             <div className="lg:col-span-5">

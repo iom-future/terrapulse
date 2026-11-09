@@ -61,7 +61,7 @@ export default function Problem() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] bg-geo-grid-light border-b border-[#101C2C]/10"
+      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] border-b border-[#101C2C]/10"
       aria-labelledby="problem-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,12 +76,12 @@ export default function Problem() {
 
           <h2
             id="problem-heading"
-            className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#101C2C] leading-[1.15] mb-5"
+            className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101C2C] leading-[1.12] mb-3 sm:mb-5"
           >
             {problemContent.headline}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#1D3557]/85 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-[#1D3557]/85 leading-relaxed">
             {problemContent.description}
           </p>
         </div>
@@ -129,7 +129,6 @@ export default function Problem() {
 
         {/* Closing Statement Banner */}
         <div className="rounded-2xl bg-[#101C2C] text-[#F4F7FA] p-8 sm:p-10 border border-[#1D3557] shadow-xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-geo-grid opacity-40 pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 font-mono text-xs text-[#55D3BD] uppercase tracking-wider mb-2">

@@ -152,7 +152,6 @@ export default function PilotForm() {
       className="relative py-24 lg:py-32 bg-[#101C2C] text-[#F4F7FA] border-b border-white/10 overflow-hidden"
       aria-labelledby="pilot-heading"
     >
-      <div className="absolute inset-0 bg-geo-grid opacity-45 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -167,17 +166,17 @@ export default function PilotForm() {
 
             <h2
               id="pilot-heading"
-              className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#F4F7FA] leading-[1.15] mb-5"
+              className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#F4F7FA] leading-[1.12] mb-3 sm:mb-5"
             >
               Let&apos;s Make Environmental Risk Easier to Understand.
             </h2>
 
-            <p className="text-base sm:text-lg text-[#F4F7FA]/85 leading-relaxed mb-4">
-              TerraPulse is seeking partnerships with organizations interested in exploring climate intelligence, flood-risk monitoring and environmental preparedness.
+            <p className="text-sm sm:text-base lg:text-lg text-[#F4F7FA]/85 leading-relaxed mb-3 sm:mb-4">
+              Partner with TerraPulse to explore early flood-risk monitoring and climate preparedness in your region.
             </p>
 
-            <p className="text-base text-[#F4F7FA]/75 leading-relaxed mb-8">
-              Join the early access programme and help shape a platform designed around real-world environmental challenges.
+            <p className="text-xs sm:text-sm text-[#F4F7FA]/75 leading-relaxed mb-6 sm:mb-8">
+              Join the early access pilot cohort and help shape tools designed around real operational challenges.
             </p>
 
             {/* Pilot Collaboration Highlights */}

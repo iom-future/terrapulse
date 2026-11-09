@@ -13,11 +13,11 @@ export const heroContent = {
   eyebrow: 'CLIMATE INTELLIGENCE FOR A CHANGING WORLD',
   headline: 'See Risk Earlier. Protect What Matters.',
   subheadline:
-    'TerraPulse turns satellite imagery, environmental data and local observations into actionable climate intelligence, helping organizations understand emerging risks and prepare before they become disasters.',
+    'TerraPulse turns satellite imagery and local observations into actionable climate intelligence, helping organizations anticipate risks and prepare before disasters strike.',
   primaryCta: 'Request Early Access',
   secondaryCta: 'Explore the Platform',
   supportingText:
-    'Built to help communities, infrastructure and organizations become more resilient to environmental threats.',
+    'Helping communities, infrastructure, and institutions become resilient to environmental threats.',
   illustrativeDisclaimer:
     'Illustrative Product Interface — Representative example data for demonstration purposes only.',
   dashboardRegions: [
@@ -139,7 +139,7 @@ export const problemContent = {
   eyebrow: 'THE CHALLENGE',
   headline: "Environmental Risks Don't Wait for Organizations to Catch Up.",
   description:
-    'Environmental threats can develop across large geographic areas, while the information needed to understand them is often fragmented, delayed or difficult to interpret. By the time a serious threat becomes obvious, the opportunity to prepare may already be shrinking.',
+    'Threats develop rapidly across broad regions while environmental information remains fragmented and delayed. By the time danger is apparent, the window to act has narrowed.',
   cards: [
     {
       number: '01',
@@ -182,7 +182,7 @@ export const howItWorksContent = {
   eyebrow: 'THE TERRAPULSE PLATFORM',
   headline: 'From Environmental Data to Decisions That Matter.',
   description:
-    'TerraPulse brings environmental information into one intelligence platform, helping organizations monitor changing conditions, understand potential exposure and coordinate informed responses.',
+    'TerraPulse unifies environmental sources into one intelligence platform to monitor conditions, assess exposure, and drive coordinated action.',
   steps: [
     {
       number: '01',
@@ -293,7 +293,7 @@ export const featuresContent = {
   eyebrow: 'WHAT THE PLATFORM DOES',
   headline: 'A Clearer Picture of Environmental Risk.',
   description:
-    'TerraPulse combines geospatial intelligence, environmental monitoring and AI-assisted analysis into a unified platform for organizations working to reduce climate-related risks.',
+    'Combining geospatial intelligence, satellite monitoring, and AI-assisted analysis into a unified risk platform.',
   features: [
     {
       id: '01',
@@ -380,7 +380,7 @@ export const intelligenceLoopContent = {
   eyebrow: 'THE INTELLIGENCE LOOP',
   headline: 'Every Observation Makes the Picture Clearer.',
   description:
-    'TerraPulse is designed around a continuous intelligence cycle. Environmental information is collected, analyzed, translated into risk insights and reviewed against what actually happens.',
+    'A continuous cycle: collect environmental data, analyze spatial patterns, assess local exposure, and review actual field outcomes.',
   cycleNodes: [
     {
       step: '01',
@@ -486,7 +486,7 @@ export const futureVisionContent = {
   eyebrow: 'THE LONG-TERM VISION',
   headline: 'From Monitoring Individual Events to Understanding Environmental Patterns.',
   description:
-    'The long-term opportunity for TerraPulse is to become a trusted environmental intelligence layer that helps organizations understand not only what is happening now, but how environmental risks evolve across locations and over time.',
+    'Evolving into a comprehensive environmental layer that tracks how climate risks shift across landscapes and seasons.',
   roadmapNotice:
     'Long-Term Capability Roadmap — TerraPulse launches with flood-risk intelligence first and expands into broader environmental layers as datasets and validation mature.',
   layers: [
@@ -562,7 +562,7 @@ export const trustContent = {
   eyebrow: 'TRUST IS PART OF THE PRODUCT',
   headline: 'Climate Intelligence Must Be Dependable.',
   description:
-    'Environmental decisions can affect lives, infrastructure and livelihoods. TerraPulse must communicate uncertainty clearly and ensure that its intelligence supports responsible human decision-making.',
+    'Because environmental threats affect human lives and critical infrastructure, TerraPulse communicates uncertainty clearly to support responsible human decisions.',
   principles: [
     {
       title: 'Evidence-Based Analysis',

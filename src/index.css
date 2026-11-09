@@ -32,21 +32,6 @@
   }
 }
 
-/* Custom geospatial grid and topographic subtle patterns */
-.bg-geo-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(57, 120, 232, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(57, 120, 232, 0.07) 1px, transparent 1px);
-}
-
-.bg-geo-grid-light {
-  background-size: 36px 36px;
-  background-image: 
-    linear-gradient(to right, rgba(16, 28, 44, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 28, 44, 0.05) 1px, transparent 1px);
-}
-
 /* Custom subtle scrollbars for dashboard panels */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;

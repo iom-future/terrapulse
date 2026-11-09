@@ -61,7 +61,6 @@ export default function IntelligenceLoop() {
       className="relative py-24 lg:py-32 bg-[#0a121e] text-[#F4F7FA] border-b border-white/10 overflow-hidden"
       aria-labelledby="intelligence-loop-heading"
     >
-      <div className="absolute inset-0 bg-geo-grid opacity-45 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -75,12 +74,12 @@ export default function IntelligenceLoop() {
 
           <h2
             id="intelligence-loop-heading"
-            className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#F4F7FA] leading-[1.15] mb-5"
+            className="font-heading text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#F4F7FA] leading-[1.12] mb-3 sm:mb-5"
           >
             {intelligenceLoopContent.headline}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#F4F7FA]/80 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-[#F4F7FA]/80 leading-relaxed">
             {intelligenceLoopContent.description}
           </p>
         </div>

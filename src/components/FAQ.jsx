@@ -24,7 +24,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] bg-geo-grid-light border-b border-[#101C2C]/10"
+      className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] border-b border-[#101C2C]/10"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export default function FAQ() {
 
             <h2
               id="faq-heading"
-              className="font-heading text-3xl sm:text-4xl font-extrabold text-[#101C2C] leading-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#101C2C] leading-tight"
             >
               Clear Answers on How TerraPulse Operates.
             </h2>

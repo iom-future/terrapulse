@@ -30,7 +30,6 @@ export default function FinalCTA() {
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#101C2C] via-[#101C2C]/85 to-[#0a121e]" />
-        <div className="absolute inset-0 bg-geo-grid opacity-50" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -44,13 +43,13 @@ export default function FinalCTA() {
 
           <h2
             id="final-cta-heading"
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F4F7FA] leading-[1.15] max-w-3xl mx-auto mb-6"
+            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F4F7FA] leading-[1.12] max-w-3xl mx-auto mb-4 sm:mb-6"
           >
             The Future of Resilience Starts With Better Intelligence.
           </h2>
 
-          <p className="text-base sm:text-xl text-[#F4F7FA]/85 max-w-2xl mx-auto leading-relaxed mb-9">
-            Environmental threats are changing. The way we understand and prepare for them should change too.
+          <p className="text-sm sm:text-lg lg:text-xl text-[#F4F7FA]/85 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-9">
+            Environmental threats are changing. The way we prepare for them must change too.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

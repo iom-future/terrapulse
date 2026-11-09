@@ -74,12 +74,12 @@ export default function Trust() {
 
           <h2
             id="trust-heading"
-            className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#F4F7FA] leading-[1.15] mb-5"
+            className="font-heading text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#F4F7FA] leading-[1.12] mb-3 sm:mb-5"
           >
             {trustContent.headline}
           </h2>
 
-          <p className="text-base sm:text-lg text-[#F4F7FA]/80 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-[#F4F7FA]/80 leading-relaxed">
             {trustContent.description}
           </p>
         </div>
