@@ -34,17 +34,22 @@ export default function Audience() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      gsap.from('.audience-card', {
-        scrollTrigger: {
-          trigger: '.audience-grid',
-          start: 'top 82%',
-        },
-        y: 24,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.audience-card',
+        { y: 24, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );

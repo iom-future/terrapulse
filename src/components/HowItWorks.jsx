@@ -42,17 +42,22 @@ export default function HowItWorks() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      gsap.from('.hiw-step-card', {
-        scrollTrigger: {
-          trigger: '.hiw-steps-grid',
-          start: 'top 82%',
-        },
-        y: 24,
-        opacity: 0,
-        duration: 0.65,
-        stagger: 0.12,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.hiw-step-card',
+        { y: 24, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.12,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );

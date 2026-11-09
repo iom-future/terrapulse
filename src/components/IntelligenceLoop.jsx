@@ -32,17 +32,22 @@ export default function IntelligenceLoop() {
         repeat: -1,
       });
 
-      gsap.from('.loop-node-card', {
-        scrollTrigger: {
-          trigger: '.loop-diagram-container',
-          start: 'top 80%',
-        },
-        y: 22,
-        opacity: 0,
-        duration: 0.65,
-        stagger: 0.12,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.loop-node-card',
+        { y: 22, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.12,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );

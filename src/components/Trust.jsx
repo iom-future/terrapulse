@@ -33,17 +33,22 @@ export default function Trust() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      gsap.from('.trust-principle-card', {
-        scrollTrigger: {
-          trigger: '.trust-principles-grid',
-          start: 'top 82%',
-        },
-        y: 22,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.trust-principle-card',
+        { y: 22, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );

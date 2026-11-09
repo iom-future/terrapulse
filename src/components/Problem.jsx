@@ -22,28 +22,38 @@ export default function Problem() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      gsap.from('.problem-header', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-        },
-        y: 24,
-        opacity: 0,
-        duration: 0.7,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.problem-header',
+        { y: 24, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 85%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+        }
+      );
 
-      gsap.from('.problem-card', {
-        scrollTrigger: {
-          trigger: '.problem-cards-grid',
-          start: 'top 82%',
-        },
-        y: 28,
-        opacity: 0,
-        duration: 0.65,
-        stagger: 0.12,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.problem-card',
+        { y: 28, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.12,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );

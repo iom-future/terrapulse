@@ -249,17 +249,22 @@ export default function Features() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      gsap.from('.feature-card', {
-        scrollTrigger: {
-          trigger: '.features-grid',
-          start: 'top 82%',
-        },
-        y: 26,
-        opacity: 0,
-        duration: 0.65,
-        stagger: 0.1,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        '.feature-card',
+        { y: 26, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.1,
+          ease: 'power3.out',
+        }
+      );
     },
     { scope: sectionRef }
   );
