@@ -7,7 +7,6 @@ import {
   Radio,
   Activity,
 } from 'lucide-react';
-import heroSatelliteImg from '../assets/images/hero-satellite.jpg';
 import { heroContent } from '../data/content';
 
 export default function Hero() {
@@ -46,12 +45,13 @@ export default function Hero() {
       {/* Cinematic Satellite Landscape as the background visual */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src={heroSatelliteImg}
+          src="/images/hero-satellite.webp"
           alt="Satellite earth observation of river basin"
-          width="1920"
-          height="1080"
+          width="1376"
+          height="768"
           fetchPriority="high"
           loading="eager"
+          decoding="async"
           className="w-full h-full object-cover object-center opacity-45 scale-102"
         />
         {/* Soft vignette gradients for text readability */}

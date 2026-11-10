@@ -3,12 +3,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Users, MapPin } from 'lucide-react';
-import aminaImg from '../assets/images/team_amina_bello.jpg';
-import chukwumaImg from '../assets/images/team_chukwuma_eze.jpg';
-import zainabImg from '../assets/images/team_zainab_ibrahim.jpg';
-import damilolaImg from '../assets/images/team_damilola_adebayo.jpg';
-import halimaImg from '../assets/images/team_halima_yusuf.jpg';
-import emekaImg from '../assets/images/team_emeka_nnamdi.jpg';
+import aminaImg from '../assets/images/team_amina_bello.webp';
+import chukwumaImg from '../assets/images/team_chukwuma_eze.webp';
+import zainabImg from '../assets/images/team_zainab_ibrahim.webp';
+import damilolaImg from '../assets/images/team_damilola_adebayo.webp';
+import halimaImg from '../assets/images/team_halima_yusuf.webp';
+import emekaImg from '../assets/images/team_emeka_nnamdi.webp';
 import { teamContent } from '../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -93,9 +93,10 @@ export default function Team() {
                     <img
                       src={photo}
                       alt={member.name}
-                      width="400"
-                      height="450"
+                      width="600"
+                      height="600"
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-104"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#101C2C] via-[#101C2C]/20 to-transparent" />

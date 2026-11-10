@@ -3,9 +3,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Quote, Building2, MapPin, ShieldCheck } from 'lucide-react';
-import tundeImg from '../assets/images/testimonial_tunde_adeyemi.jpg';
-import ngoziImg from '../assets/images/testimonial_ngozi_okonkwo.jpg';
-import faroukImg from '../assets/images/testimonial_farouk_umar.jpg';
+import tundeImg from '../assets/images/testimonial_tunde_adeyemi.webp';
+import ngoziImg from '../assets/images/testimonial_ngozi_okonkwo.webp';
+import faroukImg from '../assets/images/testimonial_farouk_umar.webp';
 import { testimonialsContent } from '../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -105,6 +105,7 @@ export default function Testimonials() {
                     width="56"
                     height="56"
                     loading="lazy"
+                    decoding="async"
                     className="w-14 h-14 rounded-full object-cover border-2 border-[#55D3BD]/50 shrink-0"
                   />
                   <div>

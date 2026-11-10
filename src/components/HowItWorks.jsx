@@ -19,7 +19,7 @@ import {
   Cpu,
   Compass,
 } from 'lucide-react';
-import sarFloodImg from '../assets/images/sar-flood-observation.jpg';
+import sarFloodImg from '../assets/images/sar-flood-observation.webp';
 import { howItWorksContent } from '../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -290,6 +290,7 @@ export default function HowItWorks() {
                       src={sarFloodImg}
                       alt="Synthetic Aperture Radar (SAR) satellite flood observation view"
                       loading="lazy"
+                      decoding="async"
                       width="900"
                       height="520"
                       className="w-full h-full object-cover opacity-80"

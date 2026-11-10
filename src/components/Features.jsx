@@ -12,7 +12,7 @@ import {
   Check,
   Download,
 } from 'lucide-react';
-import sarFloodImg from '../assets/images/sar-flood-observation.jpg';
+import sarFloodImg from '../assets/images/sar-flood-observation.webp';
 import { featuresContent } from '../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -76,6 +76,7 @@ function FeatureVisual({ type }) {
             src={sarFloodImg}
             alt="Illustrative satellite observation comparison"
             loading="lazy"
+            decoding="async"
             width="500"
             height="280"
             className="w-full h-full object-cover opacity-65"

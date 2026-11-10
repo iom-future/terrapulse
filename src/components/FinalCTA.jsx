@@ -1,5 +1,4 @@
 import { ArrowRight, Radio } from 'lucide-react';
-import heroSatelliteImg from '../assets/images/hero-satellite.jpg';
 
 export default function FinalCTA() {
   const handleScrollToPilot = (e) => {
@@ -21,12 +20,13 @@ export default function FinalCTA() {
       {/* Background Satellite & Grid Atmosphere */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroSatelliteImg}
+          src="/images/hero-satellite.webp"
           alt=""
           aria-hidden="true"
           loading="lazy"
-          width="1920"
-          height="1080"
+          decoding="async"
+          width="1376"
+          height="768"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#101C2C] via-[#101C2C]/85 to-[#0a121e]" />

@@ -11,7 +11,7 @@ import {
   Activity,
   AlertTriangle,
 } from 'lucide-react';
-import regionalTopoImg from '../assets/images/regional-topography.jpg';
+import regionalTopoImg from '../assets/images/regional-topography.webp';
 import { futureVisionContent } from '../data/content';
 
 const layerIcons = {
@@ -183,6 +183,7 @@ export default function FutureVision() {
                 src={regionalTopoImg}
                 alt="Regional satellite terrain and watershed topography map of Nigeria and Gulf of Guinea"
                 loading="lazy"
+                decoding="async"
                 width="1000"
                 height="650"
                 className="w-full h-full object-cover opacity-75"
