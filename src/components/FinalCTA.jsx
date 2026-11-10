@@ -20,7 +20,7 @@ export default function FinalCTA() {
       {/* Background Satellite & Grid Atmosphere */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-satellite.webp"
+          src={`${import.meta.env.BASE_URL}images/hero-satellite.webp`}
           alt=""
           aria-hidden="true"
           loading="lazy"

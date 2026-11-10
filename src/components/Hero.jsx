@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Cinematic Satellite Landscape as the background visual */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/images/hero-satellite.webp"
+          src={`${import.meta.env.BASE_URL}images/hero-satellite.webp`}
           alt="Satellite earth observation of river basin"
           width="1376"
           height="768"
