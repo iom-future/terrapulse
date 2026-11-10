@@ -142,8 +142,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#about"
-                  onClick={(e) => scrollToSection(e, 'about')}
+                  href="#capabilities"
+                  onClick={(e) => scrollToSection(e, 'capabilities')}
                   className="text-[#7B8794] hover:text-[#F4F7FA] transition-colors"
                 >
                   Risk Assessment
@@ -160,8 +160,8 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="#about"
-                  onClick={(e) => scrollToSection(e, 'about')}
+                  href="#platform"
+                  onClick={(e) => scrollToSection(e, 'platform')}
                   className="text-[#7B8794] hover:text-[#F4F7FA] transition-colors"
                 >
                   About TerraPulse

@@ -6,6 +6,7 @@ export const navLinks = [
   { label: 'Capabilities', href: '#capabilities' },
   { label: 'Use Cases', href: '#use-cases' },
   { label: 'Team', href: '#team' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
 ];
 

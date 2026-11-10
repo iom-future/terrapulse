@@ -46,6 +46,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="testimonials"
       ref={sectionRef}
       className="relative py-24 lg:py-32 bg-[#F4F7FA] text-[#101C2C] border-b border-[#101C2C]/10"
       aria-labelledby="testimonials-heading"

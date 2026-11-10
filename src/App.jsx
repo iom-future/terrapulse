@@ -5,7 +5,6 @@ import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Audience from './components/Audience';
 import FutureVision from './components/FutureVision';
-import Trust from './components/Trust';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import PilotForm from './components/PilotForm';
@@ -33,7 +32,6 @@ export default function App() {
         <Features />
         <Audience />
         <FutureVision />
-        <Trust />
         <Team />
         <Testimonials />
         <PilotForm />

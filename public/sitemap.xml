@@ -25,12 +25,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://terrapulse.ai/#about</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://terrapulse.ai/#pilot</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
